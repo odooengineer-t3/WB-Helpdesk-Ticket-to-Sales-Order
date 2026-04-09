@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Helpdesk Ticket to Sales Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .service-card {
+            height: 100%;
+        }
+
+        .nav-link.custom-tab.active {
+            color: #293134 !important;
+        }
+
+        .custom-main__tab.active {
+            color: #d70a53 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sh_counter_section position-relative"
+        style="margin-top:20px;margin-bottom:15px;padding:50px 0 0 0;">
+        <div class="container">
+            <div class="" style="width: 100%;background-color: #edf1f5;padding: 30px;border-radius: 35px;">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-6 gap-2 d-flex align-items-center"
+                        style="text-align:left">
+                        <a href="https://wanbuffer.com">
+                            <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1748933054/w-logo_vyfvx6.png"
+                                width="65" height="58" alt="logo">
+                            <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1748933056/wanbuffer-logo_q5sipq.png"
+                                alt="logo" width="200" height="70">
+                        </a>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-6 d-none d-md-block" style="text-align:right">
+                        <div class="sh_right_logo ">
+                            <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1748932177/odoo_logo_medium_uknl2o.png"
+                                width="200" height="63" alt="right logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow justify-content-between"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0; ">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Days Free Support</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size: 22px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">365
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_2 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #ee368c1a;">
+                                        <img src="./brandsection/days free support.png" alt="Counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0;">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Custom Apps</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">50+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_4 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #ee83361a;">
+                                        <img src="./brandsection/custom apps.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0; ">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Happy Customers</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">254+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_2 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #ee83361a;">
+                                        <img src="./brandsection/happy customer.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0; ">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Year Of Experience</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">7+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_2 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #ee83361a;">
+                                        <img src="./brandsection/year of experience.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Extra stats row similar to original if needed, or kept concise -->
+                <div class="row ">
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0;">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        countries</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">20+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_3 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #2db6f51a;">
+                                        <img src="./brandsection/countries.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0;">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Industries Served</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">12+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_4 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #2db6f51a;">
+                                        <img src="./brandsection/industries served.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0;">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-wrap: nowrap; text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Odoo Implementation</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">200+
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_3 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #2db6f51a;">
+                                        <img src="./brandsection/odoo community implementation.png"
+                                            alt="counter box img" style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+                        <div class="sh_counter_box w-100 shadow"
+                            style="padding: 30px 25px;border-radius: 10px;background-color:#fff;margin:15px 0; ">
+                            <div class="sh_content_box justify-content-between d-flex align-items-center">
+                                <div class="sh_left">
+                                    <div class="sh_title_text"
+                                        style="text-transform: capitalize;font-size:18px;margin-bottom:5px; color:#4c4c4c; font-weight: 600;">
+                                        Branches</div>
+                                    <div class="sh_counter_num"
+                                        style="font-size:18px; letter-spacing:1px;font-weight:600;color:#4c4c4c;">4
+                                    </div>
+                                </div>
+                                <div class="sh_right">
+                                    <div class="sh_icon icon_3 d-flex justify-content-center align-items-center"
+                                        style="width: 60px;height: 60px; border-radius:50%;background-color: #2db6f51a;">
+                                        <img src="./brandsection/countries.png" alt="counter box img"
+                                            style="width: 100%;height: 100%;padding: 10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row justify-content-between">
+                    <!-- Support Button -->
+                    <div class="col-lg-6" style='text-align: left;'>
+                        <a href="mailto:sales@wanbuffer.com" class="text-decoration-none">
+                            <div
+                                style="font-weight: 500; font-size: 15px; border: 1px solid #293134; display: flex; justify-content: center; background-color: #293134; border-radius: 50px; padding: 10px 20px;">
+                                <div class="text-center d-flex justify-content-around align-items-center"
+                                    style="color: #091E42; font-family: Montserrat; padding: 0; display: flex; flex-wrap: wrap; align-items: center;">
+                                    <span
+                                        style="padding: 0px 15px 0 20px; color: #fff; font-weight: 600; font-size: 18px; font-family: monospace;">Demo
+                                        / Support / Customization</span>
+                                    <b><span class=""
+                                            style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .175rem .75rem; margin-right: 15px; font-size: 15px; line-height: 1.5; border-radius: 1rem; background-color: #fff; color: #000;  font-family: monospace;">
+                                            sales@wanbuffer.com</span></b>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0 text-center text-lg-end">
+                        <span class='btn btn-primary'
+                            style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #293134;border-color: #293134;"><i
+                                class='fa fa-check' style="margin-right: 9px;"></i>Community</span>
+                        <span class='btn btn-primary'
+                            style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #293134;border-color: #293134;"><i
+                                class='fa fa-check' style="margin-right: 9px;"></i>Enterprise</span>
+                        <span class='btn btn-primary'
+                            style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #293134;border-color: #293134;"><i
+                                class='fa fa-check' style="margin-right: 9px;"></i>Odoo.sh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="sales-purchase__main-tabs mt-5">
+        <div class="container">
+            <!-- Tabs Content -->
+            <div class="tab-content" id="myTabContent">
+                <!-- Sales Tab -->
+                <div class="tab-pane fade show active" id="SalesTab" role="tabpanel" aria-labelledby="sales-tab">
+                    <!-- Terms & Conditions  -->
+                    <section id="sh_module_desc" class="sh_module_desc">
+                        <div class="container">
+                            <div class="sh_center text-center">
+                                <h4 style="font-size: 31px;font-weight: 600;color: #293134;margin-bottom: 10px;">
+                                    Helpdesk Ticket to Sales Order</h4>
+                                <div
+                                    style="display: block; height: 2px; width: 50%; max-width: 100%; margin: 20px auto 50px auto; background: linear-gradient(to right, rgba(46, 204, 113, 0) 0%, #d70a53 50%, rgba(46, 204, 113, 0) 100%); border-radius: 4px;">
+                                </div>
+                                <p
+                                    style="color: #616060;font-size: 19px;margin: 0;letter-spacing: 1px;margin-top: 12px;">
+                                    Streamline your sales process by directly connecting Support Tickets with
+                                    Sales Orders.
+                                    This module allows users to create new sales orders or link existing ones directly
+                                    from the helpdesk ticket,
+                                    ensuring seamless traceability and better collaboration between support and
+                                    sales teams.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Features Section -->
+                    <section id="sh_features" class="sh_features"
+                        style="padding-top: 50px;background-color: transparent;">
+                        <div class="container">
+                            <div class="sh_center text-center mb-5">
+                                <h4 style="font-size: 28px;font-weight: 600;color: #293134;margin-bottom: 10px;">
+                                    Features</h4>
+                                <!-- <hr style="width: 100px;border-width: 2px;border-color: #293134;" /> -->
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1748935067/line_bg8rqo.webp"
+                                    alt="heading" />
+                            </div>
+                            <div id="Feature" class="tab-pane active">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature1.png" alt="Feature 1"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Create Sales Orders directly from Helpdesk Tickets with a single
+                                                click.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature2.png" alt="Feature 2"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Syncs all SO chatter messages to the linked Ticket for complete
+                                                visibility.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature3.png" alt="Feature 3"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Link existing Sales Orders to Tickets using an intuitive wizard
+                                                interface.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature4.png" alt="Feature 4"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Maintains full audit trail of SO lifecycle events (create, link, cancel,
+                                                delete).
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature5.png" alt="Feature 5"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Smart button displays SO count with one-click access to all linked
+                                                orders.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature6.png" alt="Feature 6"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Pre-populates SO form with Ticket data for faster order creation.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature7.png" alt="Feature 7"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Auto-transition Ticket to "SO Generated" stage when SO is created or
+                                                linked.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4 shadow rounded h-100 d-flex align-items-center"
+                                            style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                                            <div
+                                                style="border: 1px solid #293134; padding: 10px; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; min-width: 60px; min-height: 60px;">
+                                                <img src="features/feature8.png" alt="Feature 8"
+                                                    style="width: 40px; height: 40px;">
+                                            </div>
+                                            <span
+                                                style="font-size: 16px; color: #212121; font-weight: 600; letter-spacing: 1px;">
+                                                Works seamlessly with existing Helpdesk and Sales workflows.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tab Section -->
+                    <section id="sh_tab" class="sh_tab" style="padding-top: 50px;background-color: transparent;">
+                        <div class="">
+                            <ul class="nav nav-tabs justify-content-center bg-transparent" id="nav-tab" role="tablist"
+                                style="gap: 10px;">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link custom-tab active" id="pills-home-tab-a" data-bs-toggle="pill"
+                                        data-bs-target="#Configurations" type="button" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">
+                                        Setup
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link custom-tab" id="pills-contact-tab-b" data-bs-toggle="pill"
+                                        data-bs-target="#FAQ" type="button" role="tab" aria-controls="pills-contact"
+                                        aria-selected="false">
+                                        FAQs
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link custom-tab" id="pills-contact-tab-c" data-bs-toggle="pill"
+                                        data-bs-target="#Support" type="button" role="tab" aria-controls="pills-contact"
+                                        aria-selected="false">
+                                        Support
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content"
+                                style="padding-top: 30px;background-color: transparent;padding-bottom: 30px;">
+
+                                <!-- tab 1 -->
+                                <div id="Configurations" class="tab-pane active sh_configuration">
+                                    <section id="sh_configuration">
+                                        <div class="container">
+                                            <p
+                                                style="color: #293134;font-size: 20px;margin-bottom: 40px;letter-spacing: .5px;">
+                                                1) Install the Module<br>
+                                                Go to the Odoo <strong style="font-weight:700;">Apps</strong> menu and
+                                                install the module.
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_1.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                2) Open a Helpdesk Ticket. You will see two new buttons in the header:
+                                                <strong style="font-weight:700;">Create Sales Order</strong> and
+                                                <strong style="font-weight:700;">Link Existing SO</strong>.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_2.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                3) Click <strong style="font-weight:700;">Create Sales Order</strong>
+                                                to instantly generate a new SO that is automatically linked to the
+                                                ticket. The specific ticket and customer details are pre-filled.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_3.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                4) Alternatively, use the <strong style="font-weight:700;">Link Existing
+                                                    SO</strong> wizard to search for and attach one or more existing
+                                                sales orders to the ticket.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_4.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                5) Once an SO is created or linked, the Ticket automatically moves to
+                                                the
+                                                <strong style="font-weight:700;">SO Generated</strong> stage, notifying
+                                                the team that sales process is in progress.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_5.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                6) View the count of all linked Sales Orders via the <strong
+                                                    style="font-weight:700;">Smart Button</strong> on the top right of
+                                                the ticket form. Click it to view the full list.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_6.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <p
+                                                style="color: #293134; font-size: 20px; margin-bottom: 40px; letter-spacing: .5px;">
+                                                7) Full <strong style="font-weight:700;">History & Logs</strong>: All
+                                                actions, including SO creation, linking,
+                                                and status changes, are automatically recorded in the chatter for full
+                                                traceability.
+                                            </p>
+
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded"
+                                                    style="width: 100%; border: 1px solid #293134; border-radius: 0.25rem !important;"
+                                                    src="screenshot/image_7.png" />
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                    </section>
+                                </div>
+
+                                <!-- tab 2 -->
+                                <div id="FAQ" class="tab-pane fade container sh_faq">
+                                    <div class="row">
+                                        <div class="col-md-12" aria-labelledby="faq-tab" id="faq" role="tabpanel">
+                                            <div class="accordion mb-4" id="accordion6">
+                                                <div style="background-color:#fff">
+                                                    <div class="accordion" id="accordion_faq">
+
+                                                        <!-- Question 1 -->
+                                                        <div style="margin:1rem 0rem">
+                                                            <div class="card-header collapsed" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFAQOne" aria-expanded="false"
+                                                                aria-controls="collapseFAQOne"
+                                                                style="cursor: pointer; background-color:#f8f8f8; border:none; border-top-right-radius:10px; border-top-left-radius:10px; padding: 12px 24px;">
+                                                                <a class="card-title text-decoration-none"
+                                                                    style="font-size:18px; line-height:30px; font-weight:500; color:#293134">
+                                                                    Can I link multiple Sales Orders to a single
+                                                                    Ticket?
+                                                                </a>
+                                                            </div>
+                                                            <div id="collapseFAQOne" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordion_faq"
+                                                                style="box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px; border: 1px solid #f8f8f8; border-bottom-right-radius:10px; border-bottom-left-radius:10px">
+                                                                <p
+                                                                    style="padding:0.75rem 1.25rem; font-size:16px; line-height:27px; color:#888;">
+                                                                    Yes, you can link as many Sales Orders as needed
+                                                                    to a single Helpdesk Ticket. The smart button will
+                                                                    show the total count.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Question 2 -->
+                                                        <div style="margin:1rem 0rem">
+                                                            <div class="card-header collapsed" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFAQTwo" aria-expanded="false"
+                                                                aria-controls="collapseFAQTwo"
+                                                                style="cursor: pointer; background-color:#f8f8f8; border:1px solid #f8f8f8; border-top-right-radius:10px; border-top-left-radius:10px; padding: 12px 24px;">
+                                                                <a class="card-title text-decoration-none"
+                                                                    style="font-size:18px; line-height:30px; font-weight:500; color:#293134">
+                                                                    Does the module automatically communicate directly
+                                                                    with the customer?
+                                                                </a>
+                                                            </div>
+                                                            <div id="collapseFAQTwo" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordion_faq"
+                                                                style="box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px; border: 1px solid #f8f8f8; border-bottom-right-radius:10px; border-bottom-left-radius:10px">
+                                                                <p
+                                                                    style="padding:0.75rem 1.25rem; font-size:16px; line-height:27px; color:#888;">
+                                                                    No, the module syncs internal notes and messages
+                                                                    between the SO and the Ticket for internal team
+                                                                    visibility. Explicit messages to customers must
+                                                                    still be sent from the ticket.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Question 3 -->
+                                                        <div style="margin:1rem 0rem">
+                                                            <div class="card-header collapsed" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseFAQThree" aria-expanded="false"
+                                                                aria-controls="collapseFAQThree"
+                                                                style="cursor: pointer; background-color:#f8f8f8; border:1px solid #f8f8f8; border-top-right-radius:10px; border-top-left-radius:10px; padding: 12px 24px;">
+                                                                <a class="card-title text-decoration-none"
+                                                                    style="font-size:18px; line-height:30px; font-weight:500; color:#293134">
+                                                                    What happens if I delete a linked Sales Order?
+                                                                </a>
+                                                            </div>
+                                                            <div id="collapseFAQThree"
+                                                                class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordion_faq"
+                                                                style="box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px; border: 1px solid #f8f8f8; border-bottom-right-radius:10px; border-bottom-left-radius:10px">
+                                                                <p
+                                                                    style="padding:0.75rem 1.25rem; font-size:16px; line-height:27px; color:#888;">
+                                                                    The module logs the deletion event on the linked
+                                                                    Helpdesk Ticket's chatter, ensuring you have a
+                                                                    record that an SO was removed.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- tab 3 -->
+                                <div id="Support" class="tab-pane fade container sh_support">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <ul style="padding: 0;list-style: none;">
+                                                <li class="border rounded"
+                                                    style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;">
+                                                    <a href="mailto:sales@wanbuffer.com"
+                                                        style="text-decoration: none;color: #212121;font-size: 18px;font-weight: 600;letter-spacing: 1px;"><span
+                                                            class="fa fa-envelope"
+                                                            style="color: #293134;padding-right: 10px;font-size: 20px;"></span>
+                                                        Please
+                                                        email us for support at <b
+                                                            style="color: #293134">sales@wanbuffer.com</b></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="sh_our_services" style="padding: 50px 0px;background-color: transparent;">
+        <div class="container">
+            <div class="sh_center text-center mb-5">
+                <h4 style="font-size: 28px;font-weight: 600;color: #293134;margin-bottom: 10px;">Our Services</h4>
+                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1748935067/line_bg8rqo.webp"
+                    alt="heading" />
+            </div>
+            <div class="row g-4">
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="#" target="_blank" style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1722422180/Development_voe3sn.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Development</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-customization-and-installation.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1722422180/customization_rlawfe.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Customization
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-consultant.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719901478/odoo-community-days-2024-consultancy_denfli.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Consultancy</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-erp-implementation.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719901480/odoo-community-days-2024-implementation_dlvs11.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Implementation
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="#" target="_blank" style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1722422180/App_Development_j1ilym.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo App
+                                    Development
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-migration-service.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719901482/odoo-community-days-2024-migration_b7d1kr.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Migration</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-training.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719901483/odoo-community-days-2024-trainig_pjcrqh.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Training</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                    <div class="box p-4 shadow rounded  service-card mb-2"
+                        style="border: 1px solid #293134;border-radius: 0.25rem !important;">
+                        <a href="https://wanbuffer.com/odoo/odoo-erp-integration.php" target="_blank"
+                            style="text-decoration: none;">
+                            <div class="icon_img mb-2">
+                                <img src="https://res.cloudinary.com/dghplu26l/image/upload/v1719901481/odoo-community-days-2024-integration_vm5n9i.webp"
+                                    alt="info"></img>
+                            </div>
+                            <div class="content">
+                                <p class="mb-0" style="font-size: 18px; color: #293134; font-weight: bold;">Odoo
+                                    Integration</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Contacts -->
+    <section class="sh_our_contacts" style="padding:40px 0px;background-color: transparent;">
+        <div class="container">
+            <div class="sh_center text-center row justify-content-center">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                        style="border-width: 1px; border-style: solid; border-color: #293134; color: #293134; position: relative; overflow: hidden; text-decoration: none; border-radius: 0px; font-size: 20px; font-weight: bold; width: 100%; border-radius: 0.25rem !important;"
+                        href="https://wa.me/9638442270" target="_blank">
+                        <span class="fa fa-whatsapp me-3" style="font-size: 30px; color: #293134;"></span>
+                        <span class="align-middle">WhatsApp</span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                        style="border-width: 1px; border-style: solid; border-color: #293134; color: #293134; position: relative; overflow: hidden; text-decoration: none; border-radius: 0px; font-size: 20px; font-weight: bold; width: 100%; border-radius: 0.25rem !important;"
+                        href="mailto:sales@wanbuffer.com" target="_blank">
+                        <span class="fa fa-envelope me-3" style="font-size: 30px; color: #293134;"></span>
+                        <span class="align-middle">Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="stage_so_generated" model="helpdesk.stage">
+            <field name="name">SO Generated</field>
+            <field name="sequence">4</field>
+            <field name="description">Stage for tickets with linked Sales Orders.</field>
+            <field name="fold" eval="False"/>
+        </record>
+    </data>
+</odoo>
