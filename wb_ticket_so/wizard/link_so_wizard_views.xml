@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_link_so_wizard_form" model="ir.ui.view">
+        <field name="name">wb.link.so.wizard.form</field>
+        <field name="model">wb.link.so.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Link Existing Sales Orders">
+                <group>
+                    <field name="ticket_id" readonly="1" invisible="1"/>
+                    <field name="sale_order_ids" widget="many2many_tags" required="1"
+                           options="{'no_create': True, 'no_edit': True}"/>
+                </group>
+                <footer>
+                    <button name="action_link_so" string="Link SO" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_link_so_wizard" model="ir.actions.act_window">
+        <field name="name">Link Existing Sales Orders</field>
+        <field name="res_model">wb.link.so.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

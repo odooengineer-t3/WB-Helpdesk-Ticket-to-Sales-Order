@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_so" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.inherit.so</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_view_sale_orders" type="object" class="oe_stat_button" icon="fa-usd"
+                        invisible="so_count == 0">
+                    <field name="so_count" widget="statinfo" string="Sales Orders"/>
+                </button>
+            </div>
+            
+            <header position="inside">
+                <button name="action_create_sale_order" string="Create Sales Order" type="object" class="btn-primary"/>
+                <button name="action_link_existing_so" string="Link Existing SO" type="object" class="btn-secondary"/>
+            </header>
+        </field>
+    </record>
+</odoo>
